@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--IOS-->
+
+<title>Tenerife + Sostenible</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<link rel="stylesheet" href="css/estilo.css" />
+<link rel="stylesheet" href="themes/tema-apptfmas.min.css" />
+<link rel="stylesheet" href="jqm145/jquery.mobile.structure-1.4.5.min.css"/>
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+<script src="jqm145/jquery-1.11.1.min.js"></script>
+<script src="jqm145/jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="shortcut icon" href="imagenes/300.png">
+<link rel="apple-touch-icon" sizes="72x72" href="72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="144.png" />
+
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="PushNotification.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript"> 
+        //El registro al servicio de google lo hacemos automáticamente
+       app.initialize();
+	
+</script>
+
+<style type="text/css">
+
+.granate {
+	color: #542876;
+}
+#page13 #contepagina13 center label {
+	color: #93C;
+	font-size: 18px;
+	font-weight: bold;
+	
+	
+}
+
+.globo{
+	margin-top:-20px;
+	float:left;
+	width:14px;
+	text-decoration: none;
+	}
+.ui-navbar li .ui-btn{
+	font-weight:normal;
+	font-size:11px;
+	color:#FFF;
+	text-shadow: 0  0px  0  #f3f3f3
+	}
+/*ordenador zoom bajo*/
+
+@media only screen {
+	#imgportada {
+  background-image:url(imgportada/4.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+
+/*tablet horizontal*/
+@media only screen
+and (max-width: 1300px){
+	#imgportada {
+  background-image:url(imgportada/3.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+
+/*tablet vertical*/
+@media only screen
+and (max-width: 992px) {
+	#imgportada {
+  background-image:url(imgportada/2.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+/*movil*/
+@media only screen 
+and (max-width: 768px){
+	#imgportada {
+  background-image:url(imgportada/1.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:contain;  
+  width: 100%;  
+  
+}
+}
+@media only screen 
+and (max-width: 450px){
+	#imgportada {
+  background-image:url(imgportada/0.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:contain; 
+  width: 100%;  
+  
+}
+}	
+
+</style>
+<script src="js/borrafavorito.js"></script>
+<script src="js/borrarmensaje.js"></script>
+<script src="js/desconectar.js"></script>
+<!--<script src="js/cargaweb.js"></script>-->
+
+<script src="js/favorito.js"></script>
+<script src="js/firma.js"></script>
+
+<script src="js/globo.js"></script>
+<script src="js/init.js"></script>
+
+<script src="js/inicio.js"></script>
+<!--<script src="js/lasesion.js"></script> -->
+<script src="js/listamensajes.js"></script>
+<script src="js/listafavorito.js"></script>
+<!--<script src="js/listaweb.js"></script>-->
+
+<script src="js/loginval2.js"></script>
+<script src="js/mostrarDatos.js"></script>
+<script src="js/onLoad.js"></script>
+<script src="js/passemail.js"></script>
+
+<script src="js/registrarColegiado.js"></script>
+
+<script src="js/cargariframes.js"></script>
+<script src="js/cargaridioma.js"></script>
+<script src="js/listanovedades.js"></script>
+
+</head> 
+<body onLoad="init()"> 
+<!-------------------------------------PAGINA 0---------------------------------------------------------------------->
+<div data-role="page" data-theme="a" id="pagina0">
+  
+  <div style="height:20px; visibility:hidden"></div>
+  <div data-role="header">
+    <h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Tenerife + Sostenible</h1>
+  </div>
+	
+      <div data-role="main" class="ui-content" >
+      	<center>
+        <div class="ui-grid-c">
+          <div class="ui-block-a"></div>
+          <div class="ui-block-b">
+          <img class="boton-tfmas" src="recursos/btn-esp.png" width="50" height="50" onClick="cargarEspanol()" />
+          </div>
+          <div class="ui-block-c">
+          <img class="boton-tfmas" src="recursos/btn-ing.png" width="50" height="50" onClick="cargarIngles()" />
+          </div>
+          <div class="ui-block-d"></div>
+        </div>
+  		</center>
+         <div class="ui-grid-solo" align="center" style="width:90%; margin-left:5%; margin-top:15%; margin-bottom:15%;">
+         <form name="form2" id="form2" method="POST">
+    			<label for="usuario" >Correo electrónico:</label>        
+        		<input name="usuario" type="email" id="usuario" autofocus>        
+     			<!---------->         
+        		<label for="pa2">Contraseña:</label>
+        		<input type="password" name="pa2" id="pa2">
+                <label>Si accede por primera vez, regístrese.</label>
+                <a data-role="button"  data-icon="check" data-transition="slide" onClick="loginVal2()" data-inline="true" style="width:90px;  text-shadow:none">Entrar</a>
+                <a data-role="button" data-icon="edit" href="#page7" style="width:90px; text-shadow:none" data-inline="true">Registrarse</a>
+                              		
+           </form> 
+              <br><br><a href="" onClick="passEmail()">He olvidado mi contraseña</a>                
+		</div>
+                      
+	 </div>
+
+  <div data-role="footer" data-position="fixed">
+   
+   	<!--<label style="font-size:15px;"><center>&copy; Todos los derechos reservados creaTáctil</center></label>-->
+   
+  </div>
+  
+</div> 
+<!---------------FIN PAGINA 0----------------------------------------->
+<!----------------------------PAGINA 1-------------------------------->
+<div data-role="page" id="page1" data-theme="a" >  
+
+ <div style="height:20px; visibility:hidden"></div>	
+ <div data-role="panel" id="overlayPanel" data-display="overlay" data-theme="a"> 
+    <h3>Menú</h3>
+    <div style="width:98%" data-theme="a">
+    
+    <ul data-role="listview">
+        <li data-icon="user" ><a id="reg" onClick="mostrarDatos()" style="text-shadow:none">Registro</a></li>
+        <li data-icon="bullets" ><a id="pro" onClick="cargarPrograma()" style="text-shadow:none">Programa</a></li>
+        <li data-icon="mail" ><a id="not" onClick="crearLista()" style="text-shadow:none">Noticias</a></li>
+        <li data-icon="video" ><a id="str" onClick="cargarStreaming()" style="text-shadow:none">Streaming</a></li>
+        <li data-icon="info" ><a id="pat" onClick="cargarPatrocinadores()" style="text-shadow:none">Patocinadores</a></li>
+        <li data-icon="navigation"><a id="red" href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
+        <li data-icon="delete"><a id="men" href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
+    </ul>    
+
+	<br>
+	<br>
+	<center>
+	App Diseñada por creaTáctil S.L.
+	<a onClick="window.open('http://www.creatactil.com','_system','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
+	</center>
+    </div>
+ </div>
+
+  
+    <div data-role="header" data-theme="a">
+		<a href="#overlayPanel" data-role="button" data-icon="bars" data-iconpos="notext"></a>
+        
+    <h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Tenerife + Sostenible</h1>
+     <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="power" onClick="desconectar()" data-iconpos="notext"></a>   
+    </div>
+    
+    
+	 <div data-role="content" id="contenido-novedades" style="margin-top: 60px;">
+		
+		  <span id="ult" style="font-style: italic; color: rgb(161, 199, 88); font-size: 18px; font-weight: bold; font-family: &quot;Trebuchet MS&quot;;">Últimas Noticias</span>
+          
+          <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="lista-novedades"  data-inset="true" data-theme="b" style="box-shadow: none;">
+		  
+          </ul>
+                   
+	 		<!--<center><div id="carga23"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>-->
+            <center><div id="carga23-novedades"><img src="imagenes/cargando.svg" style="margin-top:10%"></div></center>
+     
+    </div>
+       
+    <!--<div  id="imgportada"  data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%">
+    </div>-->
+    
+    <!--footer-->
+    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">
+    
+            <center>
+            <div class="ui-grid-b" style="margin-left: 8px;">
+              <div class="ui-block-a">
+              <img class="boton-tfmas" src="recursos/congreso.png" style="width: 180px; margin-top: 4px;" /> 
+              </div>
+              <div class="ui-block-b">
+              <img class="boton-tfmas" src="recursos/tenerifesostenible.png" style="width: 60px; margin-left: 83px;" />
+              </div>
+              <div class="ui-block-c">
+              <img class="boton-tfmas" src="recursos/cabildotenerief.png" style="width: 60px; margin-left: 46px;" />
+              </div>
+            </div>
+            </center>    
+    
+ 	<div class="ui-grid-d" >
+    
+        <div class="ui-block-a" style="padding-top:5px">
+        <center>
+        <!--<a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>-->
+        <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+        </center>
+        </div>
+    
+		<div class="ui-block-b" style="padding-top:5px">
+        <center>
+        <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
+    	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+        </center>
+     	</div>
+        
+        <div class="ui-block-c" style="padding-top:5px">
+        <center>
+        <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+        </center>
+        </div> 
+      
+	  	<div class="ui-block-d" style="padding-top:5px">
+        <center>
+        <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+        </center>
+        </div>
+        
+	  	<div class="ui-block-e" style="padding-top:5px">
+        <center>
+        <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+        </center>
+        </div>        
+
+	</div>
+    
+    
+<!--    <div data-role="navbar" >
+    <ul>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-bullets" onClick="mostrarDatos()">Registro</a></li>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-mail" onClick="crearLista()"><img class="globo">Circulares</a></li>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-star" onClick="listafavorito()">Favoritos</a></li>
+    <li><a href="#page15" class="ui-btn ui-btn-icon-top ui-icon-navigation" data-transition="slide">Web</a></li>
+    </ul>
+	</div>-->
+   
+   <!--PUBLICIDAD  <center><a onClick="web()"><img src="http://mc.creatactil.com/imagenes/banner.png" height="30px" style="margin-top:0.3em"></a></center>--> 
+    
+    </div>
+    
+</div>
+
+
+<!----------------------------PAGINA 2-------------------------------->
+<div data-role="page" id="page2" data-theme="a">
+
+	 <div style="height:20px; visibility:hidden"></div>
+	 <div data-role="header" data-theme="a">
+    
+     <a href="#" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-theme="a"></a> 
+		<h1>REGISTRO</h1>
+       
+	</div>
+    
+    <div data-role="content" id="contenido1"  >	
+
+        <form name="formulario1" id="formulario1">
+        
+            <label for="nombre">Nombre y Apellidos:</label>
+            <input name="nombre" type="text" id="nombre" value="" placeholder="Nombre y Apellidos">
+            
+            <label for="correo">Correo electrónico:</label>
+            <input name="correo" type="text" id="correo" placeholder="Correo electrónico">
+              
+            <label for="pa1">Contraseña:</label>
+            <input name="pa1" id="pa1" type="password" placeholder="Max. 20 caracteres">
+           
+            <!--<label for="isla" data-inline="true">Seleccionar Idioma:</label>-->
+            
+<!--            <select name="isla" id="isla" class="isla" data-native-menu="false" style="margin-left:1em; margin-right:1em;">
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>                   
+            </select>-->
+    
+            <input name="regId" id="regId" type="hidden">   
+             
+  		</form>  
+        
+       	 <div id="deviceready" class="blink" hidden="true">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+      </div>  
+	
+    
+     		<!-- Botones de registro 	
+ 		 <fieldset class="ui-grid-b">
+           
+           <div class="ui-block-a"></div>
+           <div class="ui-block-b">--->
+ <a href="#" data-role="button" data-transition="slide" data-icon="check" id="enviadatos" style="margin-left:1em; margin-right:1em; text-shadow:none;" onClick="registrarColegiado()">Guardar</a>
+ 		<!--	</div>	
+    		 <div class="ui-block-b">
+    <a data-role="button" name="link" href="" data-icon="plus" onClick="validarDni2()" style="margin-right:1em; margin-left:5%">Modificar Datos Alumn@s</a>
+    		</div> 
+            </fieldset>------>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>				
+    
+    <!-- Pie de pagina dos -->  
+	
+	
+</div>
+<!----------------------------FIN PAGINA 2-------------------------------->
+
+<!----------------------------PAGINA 4-------------------------------->
+<div data-role="page" id="page4" data-theme="a">
+
+	 <div style="height:20px; visibility:hidden"></div>
+	 <div data-role="header" data-theme="a">   
+	  <a data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" onClick="inicio();" data-theme="a">Atrás</a>
+      <h1 id="titulo-noticias" style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Noticias</h1>
+	<!--<a href="#page1" data-role="button" data-icon="home" onClick="inicio()">Inicio</a> -->
+    </div> 
+	
+	 <div data-role="content" id="contenido">
+		
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="lista"  data-inset="true" data-theme="b" style="box-shadow: none;">
+		  
+          </ul>
+                   
+	 		<!--<center><div id="carga23"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>-->
+            <center><div id="carga23"><img src="imagenes/cargando.svg" style="margin-top:10%"></div></center>
+       
+	</div> 
+        
+        
+        
+    <!--Pie de pagina ---->
+    <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina" style="background-color: white; border: none;">   
+        <div class="ui-grid-d" >
+            <div class="ui-block-a" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+            </center>
+            </div>
+        
+            <div class="ui-block-b" style="padding-top:5px">
+            <center>
+            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
+            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-c" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+            </center>
+            </div>        
+          
+            <div class="ui-block-d" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-e" style="padding-top:5px">
+            <center>
+            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+            </center>
+            </div>            
+        </div>
+    </div>
+   <!--Final Pie de pagina -->
+    
+   
+    
+ 
+</div>
+<!----------------------------PAGINA 5-------------------------------->
+<div data-role="page" id="page5" data-theme="a">
+	 
+	 <div style="height:20px; visibility:hidden"></div>
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" onClick="portada()" data-theme="a">Atrás</a>
+		<h1 style=" margin-left:20px; margin-right:20px;">PÁGINA DE AYUDA</h1>
+	</div>
+	
+    <div data-role="content">	
+			   
+            
+            <p><a href="#" data-role="button" data-icon="bullets" data-iconpos="notext" data-inline="true"></a><strong>Registro y modificación</strong><br>
+            	<ul>
+                 <li>Introduzca los datos del Colegiado.</li>
+                 <li>Asegúrese de que éstos son correctos para que la aplicación funcione adecuadamente. A continuación presione el botón <strong>"Guardar"</strong>.<br></li>
+               </ul>                
+         
+             <a href="#" data-role="button" data-icon="mail" data-iconpos="notext" data-inline="true"></a><strong>Circulares</strong><br>
+             <ul>
+             <li>En este apartado se muestran todas la circulares enviadas por el Colegio a nuestra aplicación móvil.</li>
+             <li> Presionando sobre el título de la circular accederá a su lectura.</li>
+             <li>Pulsando sobre el icono <strong>"X"</strong> se borrará la circular elegida.</li>
+             </ul>
+ <a href="#" data-role="button" data-icon="navigation" data-iconpos="notext" data-inline="true"></a><strong>Página Web</strong>
+ 	<ul>
+    <li> En esta opción accederá a la página web del Colegio.</li>
+    </ul>
+<a href="#" data-role="button" data-icon="phone" data-iconpos="notext" data-inline="true"></a><strong>Contacto</strong>
+ 	<ul>
+    <li> Nuestro correo de contacto: info@creatactil.com.</li>
+    </ul>
+           </p>
+		      <center><strong>
+<label>&copy; Todos los derechos reservados creaTáctil. </label></strong><a href="" onClick="window.open('http://apptfmas.creatactil.com/politica de privacidad/index.html','_system','location=no','closebuttoncaption=Return')">Aviso Legal y Política de Privacidad</a></center>     
+	</div>
+   
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" class="ui-btn ui-btn-icon-top ui-icon-home" data-transition="slide" onClick="globo()">Inicio</a></li>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-mail" onClick="crearLista()"><img class="globo">Circulares</a></li>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-star" onClick="listafavorito()">Favoritos</a></li>
+    <li><a href="#page15" class="ui-btn ui-btn-icon-top ui-icon-navigation" data-transition="slide">Web</a></li>
+    </ul>
+	</div>
+ 
+    </div>
+	 
+</div> 
+<!----------------------------PAGINA 6-------------------------------->
+<div data-role="page" id="page6" data-theme="a" >
+
+	 <div style="height:20px; visibility:hidden"></div>
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>  
+	  <h1>PÁGINA WEB</h1>
+	</div> 
+	
+	 <div data-role="content" id="contenweb" >
+			
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="listaweb"  data-inset="true" >
+		  	
+		  </ul>
+	   <!--<center><div id="carga35"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>-->
+       <center><div id="carga35"><img src="imagenes/cargando.svg" style="margin-top:10%"></div></center>
+       
+	</div>
+   
+    <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="crearLista()" data-icon="mail"><img class="globo">Circulares</a></li>
+    <li><a href="#" data-role="button" onClick="listafavorito()" data-icon="star">Favoritos</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="navigation">Web</a></li> 
+    </ul>
+	</div>
+ 
+    </div>
+ 
+</div>
+
+<!----------------------------PAGINA 7-------------------------------->
+<div data-role="page" id="page7" data-theme="a" >
+	
+    <div style="height:20px; visibility:hidden"></div>
+	<div data-role="header" data-theme="a"> 
+     
+	  <h1 style="margin: 0px 8%;">Política de Privacidad y LOPD</h1>
+	</div> 
+	
+	 <div data-role="content" id="ley">
+     			<center>
+            <div data-role="controlgroup" data-type="horizontal">
+    <a href="#pagina0" data-role="button" data-icon="back">Cancelar</a>
+	<a href="#page2" data-role="button" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+     
+     
+			<p>
+            <strong>POLÍTICA DE TRATAMIENTO DE DATOS DE CARÁCTER PERSONAL </strong><br>
+            En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, se pone en conocimiento de los usuarios de este sitio web lo siguiente: <br>
+            
+<strong>1.</strong> Los datos que los usuarios faciliten a CREATÁCTIL S.L. serán incorporados a una base de datos de la que es titular y responsable CREATÁCTIL S.L., CIF B76629021.<br>
+<strong>2.</strong> Los usuarios garantizarán los datos de carácter personal, su veracidad, exactitud, autenticidad y vigencia. En este sentido, será obligación de los usuarios mantener actualizados los datos de forma tal que correspondan a la realidad en cada momento.<br>
+<strong>3.</strong> Al facilitar datos de carácter personal a CREATÁCTIL S.L., mediante la cumplimentación de formularios de recogida de datos o su envío a través de cualquier otro medio, los usuarios declaran aceptar plenamente y sin reservas la incorporación de los datos facilitados a los ficheros de la mercantil CREATÁCTIL S.L. y su tratamiento automatizado, en los términos estipulados en el presente documento.
+Los citados ficheros están oportunamente comunicados e inscritos en el Registro General de la Agencia española de Protección de Datos, al que los usuarios pueden acceder gratuitamente si así lo desean para comprobar su situación.<br> 
+<strong>4.</strong> La recogida de datos personales y su tratamiento automatizado tiene como finalidad posibilitar o facilitar la gestión, administración, mejora y ampliación de los distintos servicios, la elaboración de estadísticas, la gestión o seguimiento de incidencias, o servicios ofrecidos por info@creatactil.com.<br>
+<strong>5.</strong> CREATÁCTIL S.L en ningún caso venderá ni arrendará datos personales de los usuarios. El usuario podrá denegar o revocar su consentimiento mediante el envío de un e-mail a info@creatactil.com.<br>
+<strong>6.</strong> Los usuarios podrán ejercitar, en cualquier momento, los derechos de acceso, rectificación, cancelación y oposición de sus datos personales. El ejercicio de estos derechos podrá efectuarse mediante el envío de un e-mail a info@creatactil.com y de forma escrita a Tenerife + Sostenible acompañado de fotocopia de su DNI.<br>
+<strong>7.</strong> CREATÁCTIL S.L se compromete a no recabar información innecesaria sobre sus usuarios, a tratar con extrema diligencia la información personal que le puedan facilitar, y a cumplir en cualquier fase del tratamiento con la obligación de guardar secreto respecto de los datos facilitados por los usuarios. 
+Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de seguridad legalmente requeridos, para evitar la pérdida, mal uso, alteración, acceso no autorizado o robo de datos personales, implementando a dicho fin todos los medios y sistemas técnicos a su alcance, habida cuenta del estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o del medio físico o natural. Ello no obstante, los usuarios deben ser conscientes de que las medidas de seguridad en Internet no son inexpugnables, y asumir los riegos que ello conlleva. <br>
+<strong>8.</strong> CREATÁCTIL S.L se reserva el derecho de modificar en cualquier momento su política de tratamiento y seguridad de datos personales, siempre respetando la legislación vigente en materia de protección de datos, y previa comunicación a los interesados, bien mediante publicación en esta misma página o en cualquier otro lugar del website, bien mediante e-mail a los interesados, o por cualquier otro medio de comunicación o difusión que se considere oportuno.<br>
+<strong>9.</strong> CREATÁCTIL S.L, le informa sobre la cesión de los datos de los correos electrónicos de los usuarios a Tenerife + Sostenible.
+La finalidad de la cesión es actualizar la base de datos de Tenerife + Sostenible. Se podrán ejercitar los derechos de acceso, rectificación, cancelación u oposición según dispone en el apartado 6.
+</p>
+		
+
+            </div>
+    
+ 
+</div>
+<!----------------------------FIN PAGINA 7------------------------------->
+<!----------------------------PAGINA 8------------------------------->
+<div data-role="page" id="page8" data-theme="a">
+	 
+	<div style="height:20px; visibility:hidden"></div> 
+	<div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
+		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE CONTACTO</h1>
+	</div>
+	
+    <div data-role="content">	
+			   
+            
+            <p>
+            <a href="#" data-role="button" data-icon="bullets" data-iconpos="notext" data-inline="true"></a><strong>Dirección</strong><br>
+            	<ul>
+                 <li>C/Horacio Nelson 17</li>
+                 <li>Codigo postal: 38006</li>
+                 <li>Santa Cruz de Tenerife</li>
+               </ul>                
+         
+             
+			<a href="#" data-role="button" data-icon="phone" data-iconpos="notext" data-inline="true"></a><strong>Teléfonos</strong>
+ 			<ul>
+    			<li> Teléfono de contacto: <a href="tel:922271431">922271431</a></li>
+    			
+            </ul>
+          	
+            <a href="#" data-role="button" data-icon="mail" data-iconpos="notext" data-inline="true"></a><strong>Correo</strong>
+ 			<ul>
+    		<li> Correo de contacto: <a href="mailto:info@congresotenerifemassostenible.com">info@congresotenerifemassostenible.com</a></li>
+    		</ul>
+          
+           </p>
+		         
+	</div>
+    
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" class="ui-btn ui-btn-icon-top ui-icon-home" data-transition="slide" onClick="globo()">Inicio</a></li>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-mail" onClick="crearLista()"><img class="globo">Circulares</a></li>
+    <li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-star" onClick="listafavorito()">Favoritos</a></li>
+    <li><a href="#page15" class="ui-btn ui-btn-icon-top ui-icon-navigation" data-transition="slide">Web</a></li>
+    </ul>
+	</div>
+ 
+    </div>
+	 
+</div> 
+<!---------------------------- PAGINA 11 -------------------------------->
+<div data-role="page" id="page11" data-theme="a" >
+	
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a">  
+	  <h1>FIRMAR</h1>
+	</div> 
+	
+	 <div data-role="content" id="firma">
+	   <p>
+           <strong>Titulo: </strong><span id="titulofirma"></span>
+	   		<br>
+            <br>
+           	Nº de registro: <span id="registrofirma" ></span>
+            <br>
+            <span id="codigofirma" hidden="true"></span>
+	   </p>
+		
+		 
+	   	    
+            <center>
+            <div data-role="controlgroup" data-type="horizontal">
+             <a href="#page1" data-role="button" data-icon="back">Cancelar</a>
+			<a href="#" data-role="button" onClick="firma()" data-icon="check">Firmar</a>
+            </div>
+            </center>
+            </div>
+    
+ 
+</div>
+<!----------------- FIN PAGINA 11 -------------------->
+
+<!---------------------------- PAGINA 14 -------------------------------->
+
+<div data-role="page" id="page14" data-theme="a" >
+
+	 <div style="height:20px; visibility:hidden"></div>
+	 <div data-role="header"  data-theme="a">   
+	  <a href="#page1" data-role="button" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a" >Atrás</a>
+      <h1>FAVORITOS</h1>
+	
+    </div> 
+	
+	 <div data-role="content" id="contenido14">
+			
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="listafav"  data-inset="true" data-theme="b">
+		  </ul>
+          
+          <ul data-role="listview"  id="listafav1"  data-inset="true" data-theme="b">
+		  </ul>
+	 		<!--<center><div id="carga14"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>-->
+            <center><div id="carga14"><img src="imagenes/cargando.svg" style="margin-top:10%"></div></center>
+    		<br><br><br><br><br><br><br><br>
+</div> 
+     
+    <!--Pie de pagina -->
+    <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina14">
+    
+
+
+    
+    </div>
+    <!--Final Pie de pagina -->
+    
+ 
+</div>
+<!---------------------------- FIN PAGINA 14 --------------------------------> 
+<!---------------------------------  PAGE 15  ------------------------------->
+<div data-role="page" data-theme="a" id="page15">
+
+	  <div style="height:20px; visibility:hidden"></div> 
+      <div data-role="header">
+      <!--<a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>-->
+      
+      <a class="ui-btn-left" data-mini="true" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" data-theme="a" onClick="inicio();"></a>
+       <h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">WEB</h1>
+        
+      </div>
+      
+       <div data-role="main" class="contenedorredes" >
+      
+      
+      
+      	<div class="ui-grid-a" style="margin-top:3%" >
+        	<div class="ui-block-a">
+            	<center><a id="imgWeb" href="" onClick="window.open('http://congresotenerifemassostenible.com/','_system');"></a>
+                <br>
+                <strong>Web</strong>
+                </center>
+            </div>
+            <div class="ui-block-b">        
+            	<center><a id="imgTwitter" href="" onClick="window.open('https://twitter.com/tfsostenible','_system');"></a>
+                <br>
+                <strong>Twitter</strong>
+                </center> 
+            </div>          
+        </div>
+        <div class="ui-grid-a" style="margin-top:10%;">
+        	<div class="ui-block-a">
+            	<center>
+                <a id="imgFacebook" href="" onClick="window.open('https://www.facebook.com/Tenerife-Sostenible-1036106073117278/timeline','_system');"></a>
+                <br>
+                <strong>Facebook</strong>
+            	</center>                          
+          </div>
+            <div class="ui-block-b">        
+             <center><a id="imgYoutube" href="" onClick="window.open('https://www.youtube.com/channel/UCv5xTcLFVKU0eJMsACDFJ1w','_system');"></a>
+                <br>
+                <strong>Youtube</strong>
+             </center>
+          </div>          
+        </div>
+        
+        
+        <div class="ui-grid-a" style="margin-top:10%;">
+        	<div class="ui-block-a">
+            	<center>
+                <a id="imgGooglePlus" href="" onClick="window.open('https://plus.google.com/u/0/111163829443790267234/posts','_system');"></a>
+                <br>
+                <strong>Google +</strong>
+            	</center>                          
+          </div>
+            <div class="ui-block-b">        
+             <center><a id="imgInstagram" href="" onClick="window.open('https://www.instagram.com/TFsostenible/','_system');"></a>
+                <br>
+                <strong>Instagram</strong>
+             </center>
+          </div>          
+        </div>        
+        
+        
+        <div class="ui-grid-a" style="margin-top:10%;">
+        	<div class="ui-block-a">
+            	<center>
+                <a id="imgCompartir" href="" onClick="window.open('whatsapp://send?text=Descarga la app de TF + SOSTENIBLE para ANDROID en https://play.google.com/store/apps/details?id=com.creatactil.tfmas para IOS en https://itunes.apple.com/us/app/tenerife-mas-sostenible/id1115817214?mt=8', '_system');"></a>
+                <br>
+                <strong>Compartir App</strong>
+            	</center>                          
+          </div>
+            <div class="ui-block-b">        
+            	<center><a id="imgCorreo" href="info@congresotenerifemassostenible.com"></a>
+                <br>
+                <strong>Correo</strong>
+                </center>
+          </div>          
+        </div>
+        
+      		
+      </div>
+ 
+
+     
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
+        <div class="ui-grid-d" >
+            <div class="ui-block-a" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+            </center>
+            </div>
+        
+            <div class="ui-block-b" style="padding-top:5px">
+            <center>
+            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
+            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-c" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+            </center>
+            </div>     
+          
+            <div class="ui-block-d" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-e" style="padding-top:5px">
+            <center>
+            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+            </center>
+            </div>            
+        </div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGE 15----------------------------------------------------------------> 
+<!---------------------------------  PAGE 16  ------------------------------->
+<div data-role="page" data-theme="a" id="page16">
+
+	  <div style="height:20px; visibility:hidden"></div>
+      <div data-role="header">
+      <a class="ui-btn-left" data-mini="true" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" data-theme="a" onClick="inicio();"></a>
+       <h1 id="titulo-patrocinadores" style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Patrocinadores</h1>
+        
+      </div>
+      
+      <div class="contenedorPatrocinadores" >
+
+<!--      <iframe class="iframe_completo" src="http://congresotenerifemassostenible.com/patrocinios/" style="width: 100%; height: 1920px; border: none;">
+  		<p>Descargando Patrocinadores...</p>
+	  </iframe>-->
+      
+      <!--<center><div id="carga23"><img src="imagenes/cargando.svg" style="margin-top:10%"></div></center>-->
+      		
+      </div>
+     
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
+        <div class="ui-grid-d" >
+            <div class="ui-block-a" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+            </center>
+            </div>
+        
+            <div class="ui-block-b" style="padding-top:5px">
+            <center>
+            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
+            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-c" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+            </center>
+            </div>     
+          
+            <div class="ui-block-d" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-e" style="padding-top:5px">
+            <center>
+            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+            </center>
+            </div>            
+        </div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGE 16---------------------------------------------------------------->
+<!---------------------------------  PAGE 17  ------------------------------->
+<div data-role="page" data-theme="a" id="page17">
+	  
+	  <div style="height:20px; visibility:hidden"></div>
+      <div data-role="header">
+      <a class="ui-btn-left" data-mini="true" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" data-theme="a" onClick="inicio();"></a>
+       <h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Streaming</h1>
+        
+      </div>
+      
+       <div class="contenedorStreaming" >
+      
+      
+      		
+      </div>
+ 
+	  <br>
+	  <br>
+	  <div>
+      <center>
+        <label id="texto1" style="font-weight:bold; color:#81bc00">Sigue en directo el Congreso</label>
+        <label id="texto2" style="font-weight:bold; color:#81bc00">Internacional Tenerife + Sostenible</label>
+      </center>
+      </div>
+     
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
+        <div class="ui-grid-d" >
+            <div class="ui-block-a" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+            </center>
+            </div>
+        
+            <div class="ui-block-b" style="padding-top:5px">
+            <center>
+            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
+            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-c" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+            </center>
+            </div>        
+          
+            <div class="ui-block-d" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-e" style="padding-top:5px">
+            <center>
+            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+            </center>
+            </div>            
+        </div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGE 17---------------------------------------------------------------->
+<!---------------------------------  PAGE 18  ------------------------------->
+<div data-role="page" data-theme="a" id="page18">
+
+	  <div style="height:20px; visibility:hidden"></div> 
+      <div data-role="header">
+      <a class="ui-btn-left" data-mini="true" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" data-theme="a" onClick="inicio();"></a>
+       <h1 id="titulo-programa" style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Programa</h1>
+
+      </div>
+      
+      
+<!--      <center>
+      <div id="cargando-tfmas"><img src="imagenes/cargando.svg" style="margin-top:10%;position: fixed;margin-left: -60px;"></div>
+      </center>-->
+      
+      <div class="contenedorPrograma" >
+      <!--<div role="main" class="ui-content" class="contenedorPrograma" >-->
+
+<!--      <iframe class="iframe_completo" src="http://congresotenerifemassostenible.com/programa/" style="width: 100%; height: 1920px; border: none;">
+  		<p>Descargando Programa...</p>
+	  </iframe>-->
+      
+      		
+      </div>
+      
+
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
+        <div class="ui-grid-d" >
+            <div class="ui-block-a" style="padding-top:5px">
+            <center>
+        	<!--<a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>-->
+        	<img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+            </center>
+            </div>
+        
+            <div class="ui-block-b" style="padding-top:5px">
+            <center>
+            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
+            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-c" style="padding-top:5px">
+            <center>
+            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+            </center>
+            </div>        
+          
+            <div class="ui-block-d" style="padding-top:5px">
+            <center>
+            <!--<a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" alt=""/></a>-->
+            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+            </center>
+            </div>
+            
+            <div class="ui-block-e" style="padding-top:5px">
+            <center>
+            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+            </center>
+            </div>            
+        </div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGE 18---------------------------------------------------------------->
+
+<!-------------------------------------PAGINA 0 EN---------------------------------------------------------------------->
+<div data-role="page" data-theme="a" id="pagina0en">
+
+  <div style="height:20px; visibility:hidden"></div>
+  <div data-role="header">
+    <h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Tenerife + Sostenible</h1>
+  </div>
+	
+      <div data-role="main" class="ui-content" >
+      	<center>
+        <div class="ui-grid-c">
+          <div class="ui-block-a"></div>
+          <div class="ui-block-b">
+          <img class="boton-tfmas" src="recursos/btn-esp.png" width="50" height="50" onClick="cargarEspanol()" />
+          </div>
+          <div class="ui-block-c">
+          <img class="boton-tfmas" src="recursos/btn-ing.png" width="50" height="50" onClick="cargarIngles()" />
+          </div>
+          <div class="ui-block-d"></div>
+        </div>
+  		</center>
+         <div class="ui-grid-solo" align="center" style="width:90%; margin-left:5%; margin-top:15%; margin-bottom:15%;">
+         <form name="form2" id="form2" method="POST">
+    			<label for="usuario" >Email:</label>        
+        		<input name="usuario" type="email" id="usuario2" autofocus>        
+     			<!---------->         
+        		<label for="pa2">Password:</label>
+        		<input type="password" name="pa2" id="pa22">
+                <label>If you access for the first time, sign up.</label>
+                <a data-role="button"  data-icon="check" data-transition="slide" onClick="loginVal22()" data-inline="true" style="width:90px;  text-shadow:none">Enter</a>
+                <a data-role="button" data-icon="edit" href="#page7en" style="width:90px; text-shadow:none" data-inline="true">Sign up</a>
+                              		
+           </form> 
+              <br><br><a href="" onClick="passEmail2()">I forgot my password</a>                
+		</div>
+                      
+	 </div>
+
+  <div data-role="footer" data-position="fixed">
+   
+   	<!--<label style="font-size:15px;"><center>&copy; All rights reserved creaTáctil</center></label>-->
+   
+  </div>
+  
+</div> 
+<!---------------FIN PAGINA 0 EN----------------------------------------->
+<!----------------------------PAGINA 7 EN-------------------------------->
+<div data-role="page" id="page7en" data-theme="a" >
+	
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a"> 
+     
+	  <h1 style="margin: 0px 8%;">Privacy Policy and PAD</h1>
+	</div> 
+	
+	 <div data-role="content" id="ley">
+     			<center>
+            <div data-role="controlgroup" data-type="horizontal">
+    <a href="#pagina0en" data-role="button" data-icon="back">Cancel</a>
+	<a href="#page2en" data-role="button" data-icon="check">Accept</a>
+            </div>
+            </center>
+     
+     
+			<p>
+            <strong>POLICY TREATMENT OF PERSONAL DATA</strong><br>
+           In compliance with the provisions of Law 15/1999 , of December 13 , Protection of Personal Data , you are hereby informs users of this site the following: <br>
+            
+<strong>1.</strong> The data that users provide to CREATÁCTIL S.L. They will be incorporated into a database which is owner and responsible CREATÁCTIL S.L., CIF B76629021.<br>
+<strong>2.</strong> Users must guarantee the personal data , their truthfulness, accuracy , authenticity and validity . In this regard, users will be required to keep the data so that it reflects reality at all times.<br>
+<strong>3.</strong> When providing personal data to CREATÁCTIL SL by filling forms for data collection or shipment through any other means , users declare to accept fully and without reservation the incorporation of the data provided to the files of the CREATÁCTIL commercial SL and automated processing , in the terms set forth herein.
+They said files are duly communicated and registered in the General Register of the Spanish Data Protection Agency, which users can access for free if they wish to check their status.<br> 
+<strong>4.</strong> The collection of personal data and automated processing is intended to enable or facilitate the management, administration , improvement and expansion of various services , the development of statistics , management or issue tracking, or services offered by info@creatactil.com.<br>
+<strong>5.</strong> CREATÁCTIL S.L in no case sell or rent personal information from users. The user may deny or revoke consent by sending an email to info@creatactil.com.<br>
+<strong>6.</strong> Users can exercise at any time, access rights, rectification, cancellation and opposition of your personal data. The exercise of these rights may be exercised by sending an email to info@creatactil.com and written form Tenerife + Sostenible accompanied by photocopy of your DNI.<br>
+<strong>7.</strong> CREATÁCTIL S.L You agree not to collect unnecessary information about its users to deal with extreme diligence personal information that can facilitate you, and to fulfill in any phase of treatment with the obligation of secrecy regarding the data provided by users. 
+Also, CREATÁCTIL S.L. undertakes to adopt at all times the levels legally required security to prevent loss, misuse, alteration, unauthorized access or theft of personal data, implementing to this end all means and technical systems within reach given the state of technology, the nature of the data stored and the risks they are exposed, whether from human action or physical or natural environment. Nevertheless, users should be aware that Internet security measures are not foolproof, and assume the risks that this entails. <br>
+<strong>8.</strong> CREATÁCTIL S.L It reserves the right to modify at any time its policy of treatment and security of personal data, while respecting the current legislation on data protection, and advance notice to interested parties through publication on this page or elsewhere the website or by email to interested parties, or by any other means of communication or dissemination deemed appropriate.<br>
+<strong>9.</strong> CREATÁCTIL S.L, informs you about the transfer of data of emails from users Tenerife + Sostenible.
+The purpose of the assignment is to update the database Tenerife + Sostenible. They may exercise their rights of access, rectification, cancellation or opposition as provided in paragraph 6.
+</p>
+		
+
+            </div>
+    
+ 
+</div>
+<!----------------------------FIN PAGINA 7 EN------------------------------->
+<!----------------------------PAGINA 2 EN-------------------------------->
+<div data-role="page" id="page2en" data-theme="a">
+	
+	<div style="height:20px; visibility:hidden"></div>
+	<div data-role="header" data-theme="a">
+    
+     <a href="#" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-theme="a"></a> 
+		<h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">SING UP</h1>
+       
+	</div>
+    
+    <div data-role="content" id="contenido1"  >	
+
+        <form name="formulario1" id="formulario1">
+        
+            <label for="nombre">First and last name:</label>
+            <input name="nombre" type="text" id="nombre2" value="" placeholder="first and last name">
+            
+            <label for="correo">Email:</label>
+            <input name="correo" type="text" id="correo2" placeholder="email">
+              
+            <label for="pa1">Password:</label>
+            <input name="pa1" id="pa12" type="password" placeholder="password">
+             
+  		</form>  
+        
+      </div>  
+	
+    
+     		<!-- Botones de registro 	
+ 		 <fieldset class="ui-grid-b">
+           
+           <div class="ui-block-a"></div>
+           <div class="ui-block-b">--->
+ <a href="#" data-role="button" data-transition="slide" data-icon="check" id="enviadatos" style="margin-left:1em; margin-right:1em; text-shadow:none;" onClick="registrarColegiado2()">Save</a>
+ 		<!--	</div>	
+    		 <div class="ui-block-b">
+    <a data-role="button" name="link" href="" data-icon="plus" onClick="validarDni2()" style="margin-right:1em; margin-left:5%">Modificar Datos Alumn@s</a>
+    		</div> 
+            </fieldset>------>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>				
+    
+    <!-- Pie de pagina dos -->  
+	
+	
+</div>
+<!----------------------------FIN PAGINA 2 EN-------------------------------->
+
+</body>
+</html>
