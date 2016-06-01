@@ -208,10 +208,10 @@ and (max-width: 450px){
     
     <ul data-role="listview">
         <li data-icon="user" ><a id="reg" onClick="mostrarDatos()" style="text-shadow:none">Registro</a></li>
-        <li data-icon="bullets" ><a id="pro" onClick="cargarPrograma()" style="text-shadow:none">Programa</a></li>
+        <li data-icon="bullets" ><a id="pro" href="#page18" style="text-shadow:none">Programa</a></li>
         <li data-icon="mail" ><a id="not" onClick="crearLista()" style="text-shadow:none">Noticias</a></li>
-        <li data-icon="video" ><a id="str" onClick="cargarStreaming()" style="text-shadow:none">Streaming</a></li>
-        <li data-icon="info" ><a id="pat" onClick="cargarPatrocinadores()" style="text-shadow:none">Patocinadores</a></li>
+        <li data-icon="video" ><a id="str" href="#page17" style="text-shadow:none">Streaming</a></li>
+        <li data-icon="info" ><a id="pat" href="#page16" style="text-shadow:none">Patocinadores</a></li>
         <li data-icon="navigation"><a id="red" href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
         <li data-icon="delete"><a id="men" href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
     </ul>    
@@ -219,7 +219,7 @@ and (max-width: 450px){
 	<br>
 	<br>
 	<center>
-	App Diseñada por creaTáctil S.L.
+	<span id="designed-by">App Diseñada por creaTáctil S.L.</span>
 	<a onClick="window.open('http://www.creatactil.com','_system','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
 	</center>
     </div>
@@ -272,30 +272,24 @@ and (max-width: 450px){
     
         <div class="ui-block-a" style="padding-top:5px">
         <center>
-        <!--<a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>-->
-        <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
+        <a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>
         </center>
         </div>
-    
 		<div class="ui-block-b" style="padding-top:5px">
         <center>
-        <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
     	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
         </center>
      	</div>
-        
         <div class="ui-block-c" style="padding-top:5px">
         <center>
-        <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
+        <a href="#page17"><img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50"/></a>
         </center>
         </div> 
-      
 	  	<div class="ui-block-d" style="padding-top:5px">
         <center>
-        <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
+        <a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50"/></a>
         </center>
         </div>
-        
 	  	<div class="ui-block-e" style="padding-top:5px">
         <center>
         <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
@@ -417,38 +411,35 @@ and (max-width: 450px){
         
     <!--Pie de pagina ---->
     <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina" style="background-color: white; border: none;">   
-        <div class="ui-grid-d" >
-            <div class="ui-block-a" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
-            </center>
-            </div>
-        
-            <div class="ui-block-b" style="padding-top:5px">
-            <center>
-            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
-            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-c" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
-            </center>
-            </div>        
-          
-            <div class="ui-block-d" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-e" style="padding-top:5px">
-            <center>
-            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
-            </center>
-            </div>            
+ 	<div class="ui-grid-d" >
+    
+        <div class="ui-block-a" style="padding-top:5px">
+        <center>
+        <a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>
+        </center>
         </div>
+		<div class="ui-block-b" style="padding-top:5px">
+        <center>
+    	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+        </center>
+     	</div>
+        <div class="ui-block-c" style="padding-top:5px">
+        <center>
+        <a href="#page17"><img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50"/></a>
+        </center>
+        </div> 
+	  	<div class="ui-block-d" style="padding-top:5px">
+        <center>
+        <a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50"/></a>
+        </center>
+        </div>
+	  	<div class="ui-block-e" style="padding-top:5px">
+        <center>
+        <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+        </center>
+        </div>        
+
+	</div>
     </div>
    <!--Final Pie de pagina -->
     
@@ -786,38 +777,37 @@ La finalidad de la cesión es actualizar la base de datos de Tenerife + Sostenib
      
      <!--footer-->  
     <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
-        <div class="ui-grid-d" >
-            <div class="ui-block-a" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
-            </center>
-            </div>
-        
-            <div class="ui-block-b" style="padding-top:5px">
-            <center>
-            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
-            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-c" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
-            </center>
-            </div>     
-          
-            <div class="ui-block-d" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-e" style="padding-top:5px">
-            <center>
-            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
-            </center>
-            </div>            
+
+ 	<div class="ui-grid-d" >
+    
+        <div class="ui-block-a" style="padding-top:5px">
+        <center>
+        <a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>
+        </center>
         </div>
+		<div class="ui-block-b" style="padding-top:5px">
+        <center>
+    	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+        </center>
+     	</div>
+        <div class="ui-block-c" style="padding-top:5px">
+        <center>
+        <a href="#page17"><img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50"/></a>
+        </center>
+        </div> 
+	  	<div class="ui-block-d" style="padding-top:5px">
+        <center>
+        <a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50"/></a>
+        </center>
+        </div>
+	  	<div class="ui-block-e" style="padding-top:5px">
+        <center>
+        <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+        </center>
+        </div>        
+
+	</div>
+
     </div>
   
 </div> 
@@ -844,38 +834,37 @@ La finalidad de la cesión es actualizar la base de datos de Tenerife + Sostenib
      
      <!--footer-->  
     <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
-        <div class="ui-grid-d" >
-            <div class="ui-block-a" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
-            </center>
-            </div>
-        
-            <div class="ui-block-b" style="padding-top:5px">
-            <center>
-            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
-            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-c" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
-            </center>
-            </div>     
-          
-            <div class="ui-block-d" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-e" style="padding-top:5px">
-            <center>
-            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
-            </center>
-            </div>            
+
+ 	<div class="ui-grid-d" >
+    
+        <div class="ui-block-a" style="padding-top:5px">
+        <center>
+        <a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>
+        </center>
         </div>
+		<div class="ui-block-b" style="padding-top:5px">
+        <center>
+    	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+        </center>
+     	</div>
+        <div class="ui-block-c" style="padding-top:5px">
+        <center>
+        <a href="#page17"><img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50"/></a>
+        </center>
+        </div> 
+	  	<div class="ui-block-d" style="padding-top:5px">
+        <center>
+        <a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50"/></a>
+        </center>
+        </div>
+	  	<div class="ui-block-e" style="padding-top:5px">
+        <center>
+        <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+        </center>
+        </div>        
+
+	</div>
+
     </div>
   
 </div> 
@@ -884,7 +873,7 @@ La finalidad de la cesión es actualizar la base de datos de Tenerife + Sostenib
 <div data-role="page" data-theme="a" id="page17">
 	  
 	  <div style="height:20px; visibility:hidden"></div>
-      <div data-role="header">
+      <div data-role="header" id="header-streaming">
       <a class="ui-btn-left" data-mini="true" data-role="button" data-transition="slide" data-icon="home" data-iconpos="notext" data-theme="a" onClick="inicio();"></a>
        <h1 style="margin-left:20px;margin-right:20px;font-size: 20px;padding: 8px;">Streaming</h1>
         
@@ -906,39 +895,38 @@ La finalidad de la cesión es actualizar la base de datos de Tenerife + Sostenib
       </div>
      
      <!--footer-->  
-    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
-        <div class="ui-grid-d" >
-            <div class="ui-block-a" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
-            </center>
-            </div>
-        
-            <div class="ui-block-b" style="padding-top:5px">
-            <center>
-            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
-            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-c" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
-            </center>
-            </div>        
-          
-            <div class="ui-block-d" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-e" style="padding-top:5px">
-            <center>
-            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
-            </center>
-            </div>            
+    <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;" id="footer-streaming">   
+
+ 	<div class="ui-grid-d" >
+    
+        <div class="ui-block-a" style="padding-top:5px">
+        <center>
+        <a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>
+        </center>
         </div>
+		<div class="ui-block-b" style="padding-top:5px">
+        <center>
+    	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+        </center>
+     	</div>
+        <div class="ui-block-c" style="padding-top:5px">
+        <center>
+        <a href="#page17"><img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50"/></a>
+        </center>
+        </div> 
+	  	<div class="ui-block-d" style="padding-top:5px">
+        <center>
+        <a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50"/></a>
+        </center>
+        </div>
+	  	<div class="ui-block-e" style="padding-top:5px">
+        <center>
+        <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+        </center>
+        </div>        
+
+	</div>
+
     </div>
   
 </div> 
@@ -971,40 +959,37 @@ La finalidad de la cesión es actualizar la base de datos de Tenerife + Sostenib
 
      <!--footer-->  
     <div data-role="footer" data-theme="a" data-position="fixed" style="background-color: white; border: none;">   
-        <div class="ui-grid-d" >
-            <div class="ui-block-a" style="padding-top:5px">
-            <center>
-        	<!--<a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>-->
-        	<img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50" onClick="cargarPrograma()" />
-            </center>
-            </div>
-        
-            <div class="ui-block-b" style="padding-top:5px">
-            <center>
-            <!--<img src="imgportada/0.png" class="globo" style="position:absolute; top:22px; width:15px; ">-->
-            <img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-c" style="padding-top:5px">
-            <center>
-            <img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50" onClick="cargarStreaming()" />
-            </center>
-            </div>        
-          
-            <div class="ui-block-d" style="padding-top:5px">
-            <center>
-            <!--<a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" alt=""/></a>-->
-            <img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50" onClick="cargarPatrocinadores()" />
-            </center>
-            </div>
-            
-            <div class="ui-block-e" style="padding-top:5px">
-            <center>
-            <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
-            </center>
-            </div>            
+
+ 	<div class="ui-grid-d" >
+    
+        <div class="ui-block-a" style="padding-top:5px">
+        <center>
+        <a href="#page18"><img class="boton-tfmas" src="recursos/btn-Programa.png" width="50" height="50"/></a>
+        </center>
         </div>
+		<div class="ui-block-b" style="padding-top:5px">
+        <center>
+    	<img class="boton-tfmas" src="recursos/btn-Noticias.png" width="50" height="50" onClick="crearLista()" />
+        </center>
+     	</div>
+        <div class="ui-block-c" style="padding-top:5px">
+        <center>
+        <a href="#page17"><img class="boton-tfmas" src="recursos/btn-Streaming.png" width="50" height="50"/></a>
+        </center>
+        </div> 
+	  	<div class="ui-block-d" style="padding-top:5px">
+        <center>
+        <a href="#page16"><img class="boton-tfmas" src="recursos/btn-Patrocinadores.png" width="50" height="50"/></a>
+        </center>
+        </div>
+	  	<div class="ui-block-e" style="padding-top:5px">
+        <center>
+        <a href="#page15"><img class="boton-tfmas" src="recursos/btn-TfMas.png" width="50" height="50" /></a>
+        </center>
+        </div>      
+
+	</div>
+
     </div>
   
 </div> 

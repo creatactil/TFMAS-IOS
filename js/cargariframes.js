@@ -1,6 +1,6 @@
 function cargarPrograma() {
 				
-		$.mobile.changePage("#page18", {transition: "fade"}, true, true);
+		//$.mobile.changePage("#page18", {transition: "fade"}, true, true);
 	
 		//$('#page18 .contenedorPrograma').empty();
         //$("#cargando-tfmas").show();
@@ -10,23 +10,23 @@ function cargarPrograma() {
 						
 		$('.contenedorPrograma').html(
 
-		  '<iframe class="iframe_completo" src="" style="width: 100%; height: '+altura_iframe+'px; border: none;">'+
+		  '<iframe class="iframe_programa" src="" style="width: 100%; height: '+altura_iframe+'px; border: none;">'+
 			'<p>Descargando Programa...</p>'+
 		  '</iframe>'
 		);
 		
-		$('.iframe_completo').css({'background-image' : 'url(imagenes/cargando.svg)', 
+		$('.iframe_programa').css({'background-image' : 'url(imagenes/cargando.svg)', 
 		                           'background-repeat': 'no-repeat',
 								   'background-position-x': 'center',
 								   'background-position-y': 'center'});
 								   
 
 		if (localStorage.idioma == 'en') {
-			$(".iframe_completo").prop('src','http://congresotenerifemassostenible.com/programa/?lang=en');
+			$(".iframe_programa").prop('src','http://congresotenerifemassostenible.com/programa/?lang=en');
 			$('#titulo-programa').html('Programme');
 
 		}else{
-			$(".iframe_completo").prop('src','http://congresotenerifemassostenible.com/programa/');
+			$(".iframe_programa").prop('src','http://congresotenerifemassostenible.com/programa/');
 			$('#titulo-programa').html('Programa');
 		}
 
@@ -36,7 +36,7 @@ function cargarPrograma() {
 
 function cargarPatrocinadores() {
 				
-		$.mobile.changePage("#page16", {transition: "fade"}, true, true);
+		//$.mobile.changePage("#page16", {transition: "fade"}, true, true);
 	
 		//$('#page18 .contenedorPrograma').empty();
         //$("#cargando-tfmas").show();
@@ -46,17 +46,17 @@ function cargarPatrocinadores() {
 						
 		$('.contenedorPatrocinadores').html(
 
-		  '<iframe class="iframe_completo" src="" style="width: 100%; height: '+altura_iframe+'px; border: none;">'+
+		  '<iframe class="iframe_patrocinadores" src="" style="width: 100%; height: '+altura_iframe+'px; border: none;">'+
 			'<p>Descargando Programa...</p>'+
 		  '</iframe>'
 		);
 		
-		$('.iframe_completo').css({'background-image' : 'url(imagenes/cargando.svg)', 
+		$('.iframe_patrocinadores').css({'background-image' : 'url(imagenes/cargando.svg)', 
 		                           'background-repeat': 'no-repeat',
 								   'background-position-x': 'center',
 								   'background-position-y': 'center'});
 
-		$(".iframe_completo").prop('src','http://congresotenerifemassostenible.com/patrocinios/');
+		$(".iframe_patrocinadores").prop('src','http://congresotenerifemassostenible.com/patrocinios/');
 
 		if (localStorage.idioma == 'en') {
 			$('#titulo-patrocinadores').html('Sponsorship');
@@ -103,13 +103,13 @@ function cargarStreaming() {
 
 function cargarStreaming2() {
 				
-		$.mobile.changePage("#page17", {transition: "fade"}, true, true);
+		//$.mobile.changePage("#page17", {transition: "fade"}, true, true);
 		
 		var ancho_pantalla = $(window).width();
 		var alto_pantalla = $(window).height() - 109;
 		
 		var ratio = 16/9;
-		var altura_iframe = ancho_pantalla/ratio;
+		var altura_iframe = (ancho_pantalla/ratio);
 		
 		if(alto_pantalla < altura_iframe){
 			
@@ -153,3 +153,32 @@ function cargarStreaming2() {
 		//$('.iframe_streaming').css({'background-image' : 'none'});
 			
 }
+
+
+// Al poner el móvil en horizontal quitamos el header y el footer de la pagina del streaming
+// para que ve vea mejor
+$(document).on("pagecreate","#page1",function(event){
+  $(window).on("orientationchange",function(event){  
+    //alert("Orientation changed to: " + event.orientation);
+	
+	var ratio = 16/9;
+	var ancho_pantalla = $(window).width();
+	var altura_iframe = (ancho_pantalla/ratio);
+	
+	if (event.orientation == 'landscape'){
+		$('#header-streaming').css({'display' : 'none'});
+		$('#footer-streaming').css({'display' : 'none'});
+		$('.iframe_streaming').css({'width' : '100%'});
+		$('.iframe_streaming').css({'height' : altura_iframe+109});
+	}
+	
+	if (event.orientation == 'portrait'){
+		$('#header-streaming').css({'display' : 'block'});
+		$('#footer-streaming').css({'display' : 'block'});
+		$('.iframe_streaming').css({'width' : '100%'});
+		$('.iframe_streaming').css({'height' : altura_iframe});
+		$('.iframe_streaming').css({'background-image' : 'none'});
+	}
+	
+  });                     
+});

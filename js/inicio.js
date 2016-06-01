@@ -40,11 +40,9 @@ function inicio(){
 		}
 	
 	
-	
-	
-	
-	
-	
-	//window.location.reload(true);
+	comprobarid();
+	cargarPatrocinadores();
+	cargarPrograma();
+	cargarStreaming()
 	crearListaNovedades();
 }

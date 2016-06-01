@@ -10,6 +10,7 @@ function cargarIngles() {
 		$("#pat").text("Sponsorship");
 		$("#red").text("Web and Social networks");
 		$("#men").text("Close menu");
+		$("#designed-by").text("App Designed by creaTáctil S.L.");		
 		
 		$("#ult").text("Last News");
 		$("#texto1").text("Congress still alive");
